@@ -78,6 +78,9 @@ def get_api_url(pos, endpoint=None, primary_key=None, secondary_key=None,
     elif pos == 8:
         base_url = "https://statsapi.mlb.com/api/{0}/{1}"
         return base_url.format(API_VERSION, API[pos])
+    elif pos == 11:
+        base_url = "https://statsapi.mlb.com/api/{0}/{1}/{2}"
+        return base_url.format(API_VERSION, API[pos], endpoint)
     else:
         error = 'The {0} API is not yet implemented.'.format(API[pos])
         raise mlbgame.exceptions.ImplementationException(error)

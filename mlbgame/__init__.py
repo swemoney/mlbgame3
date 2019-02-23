@@ -5,6 +5,7 @@ from datetime import datetime
 import mlbgame.version
 import mlbgame.data.game
 import mlbgame.data.gameday
+import mlbgame.data.standings
 import mlbgame.game
 import mlbgame.gameday
 
@@ -29,3 +30,9 @@ def schedule(params={'sportId': 1, 'date': TODAY}):
     return data
     # Schedule not yet parsed or ready for an object
     #return mlbgame.gameday.Schedule(data)
+
+def standings(standingsType='regularSeason', params={'leagueId': [103,104]}):
+    data = mlbgame.data.standings.get_standings(standingsType, params)
+    return data
+    # Standings not yet parsed or ready for an object
+    #return mlbgame.standings.Standings(data)
