@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """mlbgame functions for the people API endpoints.
 
-This module's functions gets the JSON payloads for the mlb.com games API
+This module's functions gets the JSON payloads for the mlb.com standings API
 endpoints.
 
 .. _Google Python Style Guide:
